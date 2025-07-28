@@ -1,4 +1,6 @@
 def add(a, b):
-    if not isinstance(a, int) or not isinstance(b, int):
-        raise TypeError('Both arguments must be integers')
+    if isinstance(a, str):
+        a = int(a)
+    if isinstance(b, str):
+        b = int(b)
     return a + b
